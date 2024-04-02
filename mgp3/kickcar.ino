@@ -17,6 +17,7 @@ void setup() {
   Serial.println("\n---Kick the car!---");
 }
 
+//Reads acceleration and then continues to drive depending on the force of the kick
 void loop() {
   if (IMU.accelerationAvailable()) {
     IMU.readAcceleration(x, y, z);
@@ -44,7 +45,7 @@ int calculateDegree(float x){
  return degreesX;
 }
 
-
+//Using the calcualted degrees, the motor spins for however long the driveTime is and stops.
 void drive(int power) {
   Serial.print("Power Level: ");
   Serial.println(power);
@@ -54,7 +55,6 @@ void drive(int power) {
   Serial.print(driveTime/1000.0);
   Serial.println(" seconds");
 
-  //The motor spins for however long the driveTime is and stops.
   digitalWrite(10, HIGH);
   delay(driveTime); //not executing any code while it's driving
   digitalWrite(10, LOW);
