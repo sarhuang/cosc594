@@ -11,3 +11,7 @@ In this assignment, the goal is to rethink the materiality of computing and inte
 - mgp3 - Kickcar
   
 Use the IMU (along with other sensors if desired) to create a physical-based interaction that is digitized, analyzed, and then used to control/actuate (provide haptics or move things) in the real world.
+
+- mpg4 - Gaze-based Autism Detection Using Videos ML notebook
+
+- final - AI-sensing window that raises and lowers depending on temperature
